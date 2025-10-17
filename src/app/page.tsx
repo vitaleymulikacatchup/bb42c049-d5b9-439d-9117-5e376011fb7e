@@ -32,7 +32,6 @@ export default function Page() {
             title="Welcome to TechCorp"
             description="Innovative IT solutions for your business"
             imageSrc="https://images.pexels.com/photos/34332317/pexels-photo-34332317.jpeg?auto=compress&cs=tinysrgb&h=650&w=940"
-            alt="modern office workspace - Photo by Pew Nguyen"
           />
         </div>
       </div>
