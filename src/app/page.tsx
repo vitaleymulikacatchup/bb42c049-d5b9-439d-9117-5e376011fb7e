@@ -1,4 +1,4 @@
-use client"
+"use client";
 
 import { ThemeProvider } from "@/providers/ThemeProvider";
 import NavbarLayoutFloatingOverlay from '@/components/navbar/NavbarLayoutFloatingOverlay/NavbarLayoutFloatingOverlay';
@@ -6,11 +6,6 @@ import HeroBillboard from '@/components/sections/hero/HeroBillboard';
 import TextAbout from '@/components/sections/about/TextAbout';
 import ContactCenter from '@/components/sections/contact/ContactCenter';
 import FooterBase from '@/components/sections/footer/FooterBase';
-
-const assetMap = [
-  { "id": "office-hero", "url": "https://images.pexels.com/photos/34332317/pexels-photo-34332317.jpeg?auto=compress&cs=tinysrgb&h=650&w=940", "alt": "modern office workspace - Photo by Pew Nguyen" },
-  { "id": "team-member-1", "url": "https://images.pexels.com/photos/3183150/pexels-photo-3183150.jpeg?auto=compress&cs=tinysrgb&h=650&w=940", "alt": "Overhead view of a diverse team in a business meeting using laptops and tablets." }
-];
 
 export default function Page() {
   return (
@@ -20,17 +15,15 @@ export default function Page() {
       borderRadius="soft"
     >
       <div id="nav" data-section="nav" className="scroll-mt-24">
-        <div className="mx-auto px-4 md:px-6">
-          <NavbarLayoutFloatingOverlay
-            navItems={[
-              { name: "Home", id: "home" },
-              { name: "About", id: "about" },
-              { name: "Services", id: "services" },
-              { name: "Contact", id: "contact" }
-            ]}
-            brandName="TechCorp"
-          />
-        </div>
+        <NavbarLayoutFloatingOverlay
+          navItems={[
+            { name: "Home", id: "home" },
+            { name: "About", id: "about" },
+            { name: "Services", id: "services" },
+            { name: "Contact", id: "contact" }
+          ]}
+          brandName="TechCorp"
+        />
       </div>
 
       <div id="hero" data-section="hero" className="scroll-mt-24">
@@ -38,8 +31,8 @@ export default function Page() {
           <HeroBillboard
             title="Welcome to TechCorp"
             description="Innovative IT solutions for your business"
-            imageSrc={assetMap.find(a => a.id === "office-hero")?.url ?? "/public/images/placeholder.webp"}
-            alt={assetMap.find(a => a.id === "office-hero")?.alt ?? "Decorative image"}
+            imageSrc="https://images.pexels.com/photos/34332317/pexels-photo-34332317.jpeg?auto=compress&cs=tinysrgb&h=650&w=940"
+            alt="modern office workspace - Photo by Pew Nguyen"
           />
         </div>
       </div>
